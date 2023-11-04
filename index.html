@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 13 Code challenge</title>
+</head>
+<body>
+
+    <!---------------------1st challenge from codewars-------------------->
+    <!-------------------------
+        Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+After your function finds the needle it should return a message (as a string) that says:
+
+"found the needle at position " plus the index it found the needle, so: --------->
+
+<div id="positionInArray" style= "color: white; background-color: green; text-align: center;" >
+
+ <p>1st challenge from codewars</p>
+
+        <!-----use indexOf() method to show position of a specified value in an array--->
+        
+        <p>Found the needle at position:</p>
+       <p id="needlePosition"></p>    
+        <script>
+        const myArrayOne = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+        let index = myArrayOne.indexOf("needle");
+        
+        document.getElementById("needlePosition").innerHTML = index;
+        </script> 
+        <!-------------Second option----------------->
+        <script>
+
+            const myArray = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+        
+            let indexOne;
+
+            function findNeedle() {
+                for (let i = 0; i < myArray.length; i++) {
+              if (myArray[i] === "needle") {
+                indexOne = "Found the needle at position:"  +i;
+              }
+            }
+            console.log(indexOne); 
+            }
+            
+        </script>
+                    
+        </div> 
+
+<!------------------2nd challenge form LeetCode (Sort by ascending order)------------------------>
+<div id="ascendingOrder" style= "color: white; background-color: green; text-align: center;" >
+ <p>2nd challenge form LeetCode (Sort by ascending order)</p>
+        <!---Using rray.sort() method to sort by ascending order---->
+
+        <p id="sortAscending"></p>
+
+        <script>
+        const numbers = [5, 4, 1, 2, 3];
+        numbers.sort(function(a, b){return a-b});
+        document.getElementById("sortAscending").innerHTML = numbers;
+        </script>
+        </div>
+
+    <!------------3rd challenge from LeetCode (COUNTER- Show numbers between 9 and 13)------------------->
+
+<div id="counter" style="color: white; background: green; text-align: center;">
+    <p>3rd challenge from LeetCode (COUNTER- Show numbers between 9 and 13)</p>
+
+    <p id="showNumbers" style="color: white; background: green; text-align: center;"></p>
+
+
+<script>
+let text = "COUNTER- Show numbers between 9 and 13" +"<br>";
+
+for (let n = 10; n < 13; n++) {
+  text += "The number is " + n  +"<br>";
+}
+
+document.getElementById("showNumbers").innerHTML = text;
+</script>
+</div>
+
+    <!---------------4th challenge from codewars (transform a string into a number)------------------------->
+    <div id="stringIntoNumber" style= "color: white; background-color: green; text-align: center;" >
+    <p>4th challenge from codewars (transform a string into a number)</p>
+
+            <p id="example1"></p>
+
+            <script>
+            let num1 = "1234";
+            let text1 = num1.toString();
+
+            document.getElementById("example1").innerHTML = text1;
+            </script>
+            <p id="example2"></p>
+
+            <script>
+            let num2 = "605";
+            let text2 = num2.toString();
+
+            document.getElementById("example2").innerHTML = text2;
+            </script>
+            <p id="example3"></p>
+
+            <script>
+            let num3 = "1405";
+            let text3 = num3.toString();
+
+            document.getElementById("example3").innerHTML = text3;
+            </script>
+            <p id="example4"></p>
+
+            <script>
+            let num4 = "-7";
+            let text4 = num4.toString();
+
+            document.getElementById("example4").innerHTML = text4;
+            </script>
+            </div>
+
+
+
+
+           
+
+
+</body>
+</html>
